@@ -400,5 +400,12 @@ include hardware/google/pixel/mm/device_gki.mk
 # AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
+# DeviceAsWebcam
+TARGET_BUILD_DEVICE_AS_WEBCAM := true
+PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+    system/lib64/libjni_deviceAsWebcam.so \
+    system/priv-app/DeviceAsWebcam/DeviceAsWebcam.apk \
+    system/priv-app/DeviceAsWebcam/lib/arm64/libjni_deviceAsWebcam.so
+
 # UDFPS
 TARGET_HAS_UDFPS := true
