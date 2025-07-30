@@ -44,10 +44,6 @@ ro.bluetooth.finder.supported=true
 ro.bluetooth.leaudio_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=true
 
-# Camera
-ro.frameworks.camera2.extension.service=com.google.android.apps.camera.services.extensions.service.CameraExtensions
-ro.vendor.camera.extensions.package=com.google.android.apps.camera.services
-
 # Device family
 ro.build.device_family=HK3SB3AK3
 
