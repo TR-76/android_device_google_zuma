@@ -669,3 +669,6 @@ DEVICE_MATRIX_FILE += \
     device/google/zuma/vintf/compatibility_matrix.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     device/google/zuma/vintf/device_framework_matrix_product.xml
+
+# Disable artifact path requirements
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
