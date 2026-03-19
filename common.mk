@@ -323,14 +323,12 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    DMServiceOverlayProductZuma \
     EuiccSupportPixelOverlay \
     FrameworkResOverlayProductZuma \
     FrameworkResOverlayVendorZuma \
     GazeOverlay \
     GoogleConfigOverlay \
     GooglePermissionControllerSafetyCenterOverlay \
-    PixelConfigOverlay2019 \
     PixelConfigOverlay2021 \
     PixelConfigOverlayCommon \
     PixelConnectivityOverlay2023 \
@@ -344,14 +342,12 @@ PRODUCT_PACKAGES += \
     SystemUIGoogleOverlayProductZuma \
     SystemUIGoogleOverlayVendorZuma \
     TeleServiceOverlayProductZuma \
-    TeleServiceOverlayVendorZuma \
-    TelephonyProviderOverlayProductZuma
+    TeleServiceOverlayVendorZuma
 
 PRODUCT_PACKAGES += \
     FrameworkResOverlayLineageZuma \
     LineageSdkOverlayZuma \
-    SettingsOverlayZuma \
-    SimpleDeviceConfigOverlayZuma
+    SettingsOverlayZuma
 
 # Parts
 PRODUCT_PACKAGES += \
