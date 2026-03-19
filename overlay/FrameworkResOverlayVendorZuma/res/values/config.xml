@@ -616,12 +616,6 @@
     <!-- Whether to enable usb state update via udc sysfs. -->
     <bool name="config_enableUdcSysfsUsbStateUpdate">true</bool>
 
-    <!-- List of protected packages that require biometric authentication for modification
-         (Disable, force-stop or uninstalling updates). -->
-    <string-array name="config_biometric_protected_package_names">
-        <item>com.google.android.crossdeviceaccessservice</item>
-    </string-array>
-
     <!-- Whether to enable fp unlock when screen turns off on udfps devices -->
     <bool name="config_screen_off_udfps_enabled">true</bool>
 </resources>
