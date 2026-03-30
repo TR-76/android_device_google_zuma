@@ -42,10 +42,6 @@ ro.bluetooth.finder.supported=true
 ro.bluetooth.leaudio_offload.supported=true
 ro.bluetooth.leaudio_switcher.supported=true
 
-# Camera
-ro.vendor.camera.extensions.package=com.google.android.apps.camera.services
-ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
-
 # Dumpstate
 dumpstate.strict_run=false
 
