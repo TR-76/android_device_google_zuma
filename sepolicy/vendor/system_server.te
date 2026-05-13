@@ -3,3 +3,18 @@ binder_call(system_server, gpsd)
 binder_call(system_server, hal_camera_default)
 
 allow system_server arm_mali_platform_service:service_manager find;
+
+# AxBurstEngine: DRAM min_freq boost on MIF devfreq (sysfs_fabric)
+allow system_server sysfs_fabric:dir search;
+allow system_server sysfs_fabric:file rw_file_perms;
+
+allow system_server proc_vendor_sched:dir search;
+allow system_server proc_vendor_sched:file rw_file_perms;
+
+allow system_server sysfs_display:dir search;
+allow system_server sysfs_display:file rw_file_perms;
+
+allow system_server latency_device:chr_file rw_file_perms;
+
+allow system_server sysfs_cpu:dir search;
+allow system_server sysfs_cpu:file rw_file_perms;
