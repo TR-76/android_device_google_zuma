@@ -6,9 +6,9 @@
   <resource id="0x0019" name="cpu_up_rate_limit_c0" path="/sys/devices/system/cpu/cpu0/cpufreq/sched_pixel/up_rate_limit_us" default="2000" />
   <resource id="0x001a" name="cpu_up_rate_limit_c1" path="/sys/devices/system/cpu/cpu4/cpufreq/sched_pixel/up_rate_limit_us" default="2000" />
   <resource id="0x001b" name="cpu_up_rate_limit_c2" path="/sys/devices/system/cpu/cpu6/cpufreq/sched_pixel/up_rate_limit_us" default="2000" />
-  <resource id="0x0004" name="cpu_dvfs_headroom" path="/proc/vendor_sched/dvfs_headroom" default="0" />
+  <resource id="0x0004" name="cpu_dvfs_headroom" path="/proc/vendor_sched/dvfs_headroom" default="1100" />
   <resource id="0x0005" name="cpu_tapered_dvfs_headroom" path="/proc/vendor_sched/tapered_dvfs_headroom_enable" default="0" />
-  <resource id="0x0006" name="cpu_util_threshold" path="/proc/vendor_sched/util_threshold" default="0" />
+  <resource id="0x0006" name="cpu_util_threshold" path="/proc/vendor_sched/util_threshold" default="2048 1280 1280" />
   <resource id="0x0007" name="display_hw_early_wakeup" path="/sys/devices/platform/19470000.drmdecon/early_wakeup" default="0" />
   <resource id="0x0008" name="dram_min_freq" path="/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/min_freq" default="0" />
   <resource id="0x0009" name="gpu_boost" path="/sys/devices/platform/1f000000.mali/hint_min_freq" default="0" />
