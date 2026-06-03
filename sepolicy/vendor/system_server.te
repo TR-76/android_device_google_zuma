@@ -20,3 +20,6 @@ allow system_server sysfs_cpu:dir search;
 allow system_server sysfs_cpu:file rw_file_perms;
 allow system_server sysfs_devices_system_cpu:dir search;
 allow system_server sysfs_devices_system_cpu:file rw_file_perms;
+
+allow system_server sysfs_gpu:dir search;
+allow system_server sysfs_gpu:file rw_file_perms;
