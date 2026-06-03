@@ -37,7 +37,6 @@ BOARD_KERNEL_CMDLINE += \
     cgroup_disable=memory \
     rcupdate.rcu_expedited=1 \
     rcu_nocbs=all \
-    rcutree.enable_rcu_lazy \
     swiotlb=1024 \
     cgroup.memory=nokmem \
     sysctl.kernel.sched_pelt_multiplier=4 \
