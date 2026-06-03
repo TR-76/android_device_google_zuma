@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <boosts>
   <boost-resource id="0x01fa" name="sched_pixel_latency_boost">
-    <set resource="cpu_down_rate_limit_c0" id="0x0001" value="20000" />
-    <set resource="cpu_down_rate_limit_c1" id="0x0002" value="20000" />
-    <set resource="cpu_down_rate_limit_c2" id="0x0003" value="20000" />
+    <set resource="cpu_down_rate_limit_c0" id="0x0001" value="10000" />
+    <set resource="cpu_down_rate_limit_c1" id="0x0002" value="10000" />
+    <set resource="cpu_down_rate_limit_c2" id="0x0003" value="10000" />
     <set resource="cpu_up_rate_limit_c0" id="0x0019" value="0" />
     <set resource="cpu_up_rate_limit_c1" id="0x001a" value="0" />
     <set resource="cpu_up_rate_limit_c2" id="0x001b" value="0" />
@@ -19,18 +19,26 @@
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
   </boost-resource>
   <boost-resource id="0x01fd" name="latency_boost">
-    <set resource="uclamp_fg_min" id="0x0012" value="70" />
-    <set resource="uclamp_top_min" id="0x0015" value="100" />
+    <set resource="uclamp_fg_min" id="0x0012" value="60" />
+    <set resource="uclamp_top_min" id="0x0015" value="90" />
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
     <set resource="uclamp_fg_max" id="0x0011" value="100" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
+    <set resource="dram_min_freq" id="0x0008" value="9999999" />
+    <set resource="auto_prefer_idle" id="0x0024" value="0" />
+    <set resource="cpu_uclamp_max_filter_enable" id="0x0025" value="0" />
+    <set resource="bg_uclamp_max" id="0x0026" value="512" />
+    <set resource="dex2oat_uclamp_max" id="0x0027" value="615" />
+    <set resource="dsu_min_freq" id="0x0028" value="1800000" />
+    <set resource="bci_min_freq" id="0x0029" value="1401000" />
+    <set resource="ta_rampup_multiplier" id="0x0021" value="4" />
     <set resource="pmqos_cpu_dma_latency" id="0x000e" value="44" />
   </boost-resource>
   <boost-resource id="0x01fe" name="render_gpu_boost">
     <set resource="gpu_boost" id="0x0009" value="521000" />
   </boost-resource>
-  <boost opcode="1" timeout_ms="3000" name="first_launch">
+  <boost opcode="1" timeout_ms="2500" name="first_launch">
     <set resource="latency_boost" id="0x01fd" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
@@ -159,11 +167,11 @@
     <set resource="pmqos_cpu_dma_latency" id="0x000e" value="44" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="36" timeout_ms="1000" name="early_wakeup">
+  <boost opcode="36" timeout_ms="600" name="early_wakeup">
     <set resource="cpu_res_boost" id="0x01fc" />
     <set resource="display_hw_early_wakeup" id="0x0007" value="1" />
-    <set resource="uclamp_fg_min" id="0x0012" value="70" />
-    <set resource="uclamp_top_min" id="0x0015" value="70" />
+    <set resource="uclamp_fg_min" id="0x0012" value="60" />
+    <set resource="uclamp_top_min" id="0x0015" value="60" />
     <set resource="uclamp_fg_max" id="0x0011" value="100" />
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
@@ -173,7 +181,7 @@
     <set resource="pmqos_cpu_dma_latency" id="0x000e" value="44" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="37" timeout_ms="1000" name="transition">
+  <boost opcode="37" timeout_ms="600" name="transition">
     <set resource="cpu_res_boost" id="0x01fc" />
     <set resource="uclamp_fg_min" id="0x0012" value="50" />
     <set resource="uclamp_top_min" id="0x0015" value="50" />
@@ -230,17 +238,26 @@
     <set resource="uclamp_fg_min" id="0x0012" value="40" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="46" timeout_ms="1500" name="shade">
+  <boost opcode="46" timeout_ms="700" name="shade">
     <set resource="uclamp_fg_min" id="0x0012" value="50" />
     <set resource="uclamp_top_min" id="0x0015" value="50" />
     <set resource="render_gpu_boost" id="0x01fe" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
   <boost opcode="47" timeout_ms="0" name="game">
-    <set resource="uclamp_top_min" id="0x0015" value="70" />
+    <set resource="uclamp_top_min" id="0x0015" value="60" />
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1100" />
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="1" />
+    <set resource="auto_prefer_idle" id="0x0024" value="0" />
+    <set resource="auto_migration_margins_enable" id="0x0020" value="0" />
+    <set resource="auto_dvfs_headroom_enable" id="0x001f" value="0" />
+    <set resource="ta_rampup_multiplier" id="0x0021" value="1" />
+    <set resource="adpf_rampup_multiplier" id="0x0022" value="2" />
+    <set resource="cpu_little_response_time_ms" id="0x001c" value="9" />
+    <set resource="cpu_mid_response_time_ms" id="0x001d" value="52" />
+    <set resource="cpu_big_response_time_ms" id="0x001e" value="178" />
+    <set resource="per_task_iowait_boost_max" id="0x0023" value="0" />
   </boost>
   <boost opcode="69" timeout_ms="2000" name="game_launch">
     <set resource="latency_boost" id="0x01fd" />
@@ -250,7 +267,7 @@
     <set resource="uclamp_fg_min" id="0x0012" value="40" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="52" timeout_ms="2000" name="package_install_boost">
+  <boost opcode="52" timeout_ms="1200" name="package_install_boost">
     <set resource="cpuset_dex2oat_cpus" id="0x009b" value="0-7" />
     <set resource="uclamp_fg_min" id="0x0012" value="100" />
     <set resource="uclamp_top_min" id="0x0015" value="100" />
@@ -259,7 +276,7 @@
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="53" timeout_ms="1000" name="pkg_install">
+  <boost opcode="53" timeout_ms="800" name="pkg_install">
     <set resource="uclamp_fg_min" id="0x0012" value="100" />
     <set resource="uclamp_top_min" id="0x0015" value="100" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
@@ -272,7 +289,7 @@
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="55" timeout_ms="1000" name="app_update">
+  <boost opcode="55" timeout_ms="800" name="app_update">
     <set resource="uclamp_fg_min" id="0x0012" value="70" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
@@ -282,13 +299,13 @@
     <set resource="uclamp_top_min" id="0x0015" value="50" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="66" timeout_ms="2000" name="launcher_load">
+  <boost opcode="66" timeout_ms="1000" name="launcher_load">
     <set resource="uclamp_top_min" id="0x0015" value="50" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
     <set resource="sched_pixel_latency_boost" id="0x01fa" />
   </boost>
-  <boost opcode="67" timeout_ms="2000" name="proc_kill">
+  <boost opcode="67" timeout_ms="1000" name="proc_kill">
     <set resource="uclamp_fg_min" id="0x0012" value="70" />
     <set resource="cpu_dvfs_headroom" id="0x0004" value="1280" />
     <set resource="cpu_tapered_dvfs_headroom" id="0x0005" value="0" />
